@@ -1,5 +1,5 @@
 const CACHE_NAME = 'pwa-grocery-list';
-const urlsToCache = ['/', '/completed'];
+const urlsToCache = ['/', '/purchased'];
 
 // Install a service worker
 self.addEventListener('install', (event) => {
@@ -27,7 +27,7 @@ self.addEventListener('fetch', (event) => {
 
 // Update a service worker
 self.addEventListener('activate', (event) => {
-  var cacheWhitelist = ['pwa-task-manager'];
+  var cacheWhitelist = ['pwa-grocery-list'];
   event.waitUntil(
     caches.keys().then((cacheNames) => {
       return Promise.all(
