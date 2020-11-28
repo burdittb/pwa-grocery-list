@@ -1,5 +1,5 @@
 const CACHE_NAME = 'pwa-grocery-list';
-const urlsToCache = ['/', '/purchased'];
+const urlsToCache = ['/'];
 
 // Install a service worker
 self.addEventListener('install', (event) => {
